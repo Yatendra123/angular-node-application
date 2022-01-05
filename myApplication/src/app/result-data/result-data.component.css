@@ -1,0 +1,45 @@
+.nav__container {
+ 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-top: 4vh;
+    border: solid 1px black;
+    background-color: aquamarine;
+   }
+   .main{
+       text-align: center;
+       margin-top: 40px;
+    
+   }
+   .nav__right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 7px;
+   }
+   .b1{
+       font-size: 20px;
+       border-radius: 8px;
+       padding-left: 10px;
+   padding-right: 10px;
+   margin: 5px;
+   }
+   .nav__right p {
+    margin-right: 15px;
+    font-size: large;
+   }
+   
+   .nav__right button {
+    width: 73px;
+    background-color: rgb(238, 200, 131);
+   }
+   
+   .nav__center h1 {
+    margin-left: 75px;
+   }
+   table{
+       margin-left: auto;
+       margin-right: auto;
+   }

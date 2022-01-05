@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Add Record
+    </title>
+
+</head>
+
+<body>
+    <nav class="nav__container">
+        <div class="nav__left"></div>
+        <div class="nav__center">
+            <h1>Result Management System</h1>
+        </div>
+
+        <form><input type="submit" value="Logout" routerLink="" class="b1"></form>
+
+    </nav>
+    <br><br>
+    <a href="teacher">Back</a>
+
+    <div class="main">
+        <h3><b>Edit Student Detail</b></h3>
+
+        <h2 *ngFor="let data of detail">{{data.name}}</h2>
+        <form #editForm="ngForm" (ngSubmit)="updateStudentDetail(editForm.value)">
+            <table>
+                <tr *ngFor="let data of detail">
+                    <td>Roll No:</td>
+                    <td><input type="number" ngModel name="rollno" [(ngModel)]="data.rollno" required></td>
+                </tr>
+
+                <tr *ngFor="let data of detail">
+                    <td>Name:</td>
+                    <td><input type="text" ngModel name="name" [(ngModel)]="data.name" required></td>
+                </tr>
+                <tr *ngFor="let data of detail">
+                    <td>Date of birth:</td>
+                    <td><input type="date" name="dob" [(ngModel)]="data.dob" required></td>
+                </tr>
+                <tr *ngFor="let data of detail">
+                    <td>Marks:</td>
+                    <td><input type="number" name="marks" [(ngModel)]="data.marks" required></td>
+                </tr>
+            </table>
+            <div class=" l1"><button class="l1">Update</button><button class="l1"
+                    type="reset">Clear</button>
+            </div>
+
+        </form>
+    </div>
+    <h1 *ngIf="updateCheck!=null" style="text-align: center;color: green;">Data Updated</h1>
+</body>
+
+
+
+</html>

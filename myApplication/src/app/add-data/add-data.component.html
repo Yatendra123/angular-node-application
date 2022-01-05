@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Add Record
+    </title>
+    
+</head>
+
+<body>
+    <nav class="nav__container">
+        <div class="nav__left"></div>
+        <div class="nav__center">
+            <h1>Result Management System</h1>
+        </div>
+
+        <form><button class="b1" routerLink="">Logout</button></form>
+
+    </nav>
+    <br><br>
+    <a href="teacher">Back</a>
+
+    <div class="main">
+        <h3><b>Add New Result</b></h3>
+<form #saveRecord="ngForm" (ngSubmit)="studentdbo(saveRecord.value)">
+        <table>
+            <tr>
+                <td>Roll No:</td>
+                <td><input type="number" name="rollno" ngModel></td>
+            </tr>
+           
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" name="name" ngModel></td>
+            </tr>
+            <tr>
+                <td>Date of birth:</td>
+                <td><input type="date" name="dob" ngModel></td>
+            </tr>
+            <tr>
+                <td>Marks:</td>
+                <td><input type="number" name="marks" ngModel></td>
+            </tr>
+        </table>
+            <div class="l1"><button class="l1" type="submit">Submit</button> <button class="l1" type="reset">Clear</button></div>
+
+        </form>
+
+
+    </div>
+<h1 *ngIf="data!=null" style="text-align: center;color: green;">Data Inserted</h1>
+</body>
+
+</html>

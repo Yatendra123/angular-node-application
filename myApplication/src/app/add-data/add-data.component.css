@@ -1,0 +1,42 @@
+.nav__container {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-top: 4vh;
+    border: solid 1px black;
+    background-color: aquamarine;
+}
+
+
+.b1 {
+    margin-top: 25%;
+    border-radius: 8px;
+    margin-right: 10px;
+    width: 73px;
+    padding: 4px;
+    border: solid 2px rgb(243, 190, 93);
+    background-color: rgb(255, 237, 204);
+}
+
+.l1 {
+    font-size: 20px;
+    border-radius: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 10px;
+}
+
+.nav__center h1 {
+    margin-left: 75px;
+}
+
+.main {
+    text-align: center;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}

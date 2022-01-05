@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Student Page
+    </title>
+    
+</head>
+<body>
+    <nav class="nav__container">
+        <div class="nav__left"></div>
+        <div class="nav__center">
+          <h1>Result Management System</h1>
+        </div>
+        <div class="nav__right">
+         <form><button routerLink="">Logout</button></form>
+          
+        </div>
+      </nav>
+  
+    <div class="main">
+        <div class="container">
+            <h3><b>Find Result</b></h3>
+            <form #findForm="ngForm" (ngSubmit)="search(findForm.value)">
+             <label>Roll No:</label><input type="number" name="rollno" required ngModel>
+             <br><br>
+             <label>Name:</label> <input type="text" name="name" required ngModel><br><br>
+             <div class="b1"><input class="b1" type="submit" value="Search"> <input class="b1" type="reset" value="Clear" routerLink="result"></div>
+            </form>
+        </div>
+    </div><br><br>
+<hr>
+<div class="main" *ngIf="result!=null">
+    <h3><b>Result</b></h3>
+
+    <table>
+        <tr>
+            <td>Roll No:</td>
+            <td><label *ngFor="let data of result">{{data.rollno}}</label></td>
+        </tr>
+
+        <tr>
+            <td>Name:</td>
+            <td><label *ngFor="let data of result">{{data.name}}</label></td>
+        </tr>
+        <tr>
+            <td>Date of birth:</td>
+            <td><label *ngFor="let data of result">{{data.dob | date}}</label></td>
+        </tr>
+        <tr>
+            <td>Marks:</td>
+            <td><label *ngFor="let data of result">{{data.marks}}</label></td>
+        </tr>
+    </table>
+
+
+
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,18 @@
+.row1{
+    text-align: center;
+    margin-top: 60px;
+
+}
+.btn{
+    background-color: #0c53ee;
+  border-radius: 7px;
+  color: white;
+  padding: 8px 18px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 2px 2px;
+  cursor: pointer;
+  
+}
